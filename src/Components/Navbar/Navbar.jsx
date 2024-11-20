@@ -3,7 +3,7 @@ import { FaUser, FaShoppingCart, FaBars, FaSearch } from 'react-icons/fa';
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  
   return (
     <nav className="bg-white shadow-md">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
