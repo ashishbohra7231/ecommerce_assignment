@@ -1,6 +1,6 @@
 import React, { useContext } from 'react' 
-import { StoreContext } from '../../Components/Storecontext/Storecontext';
-import ProductCard from '../../Components/Product/ProductCard';
+import { StoreContext } from '../Components/Storecontext/Storecontext';
+import ProductCard from '../Components/Product/ProductCard';
 
 export default function Homepage() {
     const { data, categoryData, selectedCate ,setseletedCate,loading, sort, setSort, error } = useContext(StoreContext);
