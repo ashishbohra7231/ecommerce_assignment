@@ -11,13 +11,13 @@ export default function Homepage() {
     <div className='mb-2'>
   <label   className="block mb-2">Filter:</label>
   <select 
-  value={localStorage.getItem("selectedCate")}
-    onChange={(e) => {
+  value={selectedCate}
+    onChange={(e) => { 
         setseletedCate(e.target.value);
       console.log("Selected Category:", e.target.value);
     }}
     className="border border-gray-300 rounded p-2"
-  ><option value={""}  >
+  ><option value={"allproduct"}  >
   All
 </option>
     {categoryData && categoryData.map((item, index) => (

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useSearchParams, useNavigate, Link } from "react-router-dom";
 
 export default function ProductDetail() {
   const [searchParams] = useSearchParams();
@@ -76,6 +76,14 @@ export default function ProductDetail() {
   return (
     <div className="bg-white min-h-screen">
       <div className="container mx-auto p-6">
+        {/* Breadcrumb */}
+        <nav className="text-gray-600 text-sm mb-4">
+          <Link to="/" className="hover:underline text-blue-600">
+            Home
+          </Link>{" "}
+          / <span className="text-gray-500">{product?.title}</span>
+        </nav>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-white shadow-md rounded-lg p-6">
           {/* Product Image */}
           <div className="flex items-center justify-center bg-gray-50 rounded-lg p-4">

@@ -6,7 +6,7 @@ const StoreContextProvider = ({ children }) => {
   const [data, setData] = useState();
   const [categoryData, setCategoryData] = useState();
 
-  const [selectedCate, setseletedCate] = useState(localStorage.getItem("selectedCate"));
+  const [selectedCate, setseletedCate] = useState(localStorage.getItem("selectedCate") );
    
   const [sort, setSort] = useState(localStorage.getItem("sortOrder"));
   
@@ -30,7 +30,7 @@ useEffect(() => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(selectedCate =="" ? `https://fakestoreapi.com/products?sort=${sort}/${selectedCate}` :`https://fakestoreapi.com/products/category/${selectedCate}` );
+        const response = await fetch(selectedCate == "allproduct" ? `https://fakestoreapi.com/products?sort=${sort}/${selectedCate}` :`https://fakestoreapi.com/products/category/${selectedCate}` );
         if (!response.ok) throw new Error("Failed to fetch data");
         const result = await response.json(); 
         setData(result); 
